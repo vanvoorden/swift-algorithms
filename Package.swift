@@ -31,5 +31,11 @@ let package = Package(
     .testTarget(
       name: "SwiftAlgorithmsTests",
       dependencies: ["Algorithms"]),
+    .executableTarget(
+      name: "Client",
+      dependencies: [
+        "Algorithms",
+        .product(name: "RealModule", package: "swift-numerics")
+      ]),
   ]
 )

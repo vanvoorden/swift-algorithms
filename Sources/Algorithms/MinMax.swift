@@ -272,9 +272,9 @@ extension Collection {
 
     // If we're attempting to prefix more than 10% of the collection, it's
     // faster to sort everything.
-    guard prefixCount < (self.count / 10) else {
-      return Array(try sorted(by: areInIncreasingOrder).prefix(prefixCount))
-    }
+//    guard prefixCount < (self.count / 10) else {
+//      return Array(try sorted(by: areInIncreasingOrder).prefix(prefixCount))
+//    }
 
     return try _minImplementation(count: count, sortedBy: areInIncreasingOrder)
   }
@@ -328,9 +328,9 @@ extension Collection {
 
     // If we're attempting to prefix more than 10% of the collection, it's
     // faster to sort everything.
-    guard suffixCount < (self.count / 10) else {
-      return Array(try sorted(by: areInIncreasingOrder).suffix(suffixCount))
-    }
+//    guard suffixCount < (self.count / 10) else {
+//      return Array(try sorted(by: areInIncreasingOrder).suffix(suffixCount))
+//    }
 
     return try _maxImplementation(count: count, sortedBy: areInIncreasingOrder)
   }
